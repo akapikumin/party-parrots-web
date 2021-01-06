@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+.header p {
+    text-align: center;
+}
+
+.space {
+    height: 5vh;
+}
+
+#graph {
+    background-color: rgba(80, 200, 200, 0.3);
+}

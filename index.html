@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>カカポの寝室 -ホーム</title>
+    <link rel="stylesheet" href="css_folder/index.css">
+</head>
+<body>
+    <div id="wrapper">
+        <!--ハンバーガーメニュー-->
+        <div class="drawer">
+            <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+            <input type="checkbox" id="drawer-check" class="drawer-hidden" >
+
+            <!-- ハンバーガーアイコン -->
+            <label for="drawer-check" class="drawer-open"><span></span></label>
+
+            <!-- メニュー -->
+            <nav class="drawer-content">
+              <ul class="drawer-list">
+                  <div class="menu_link">
+                    <a href="index.html" style="text-decoration: none">ホーム</a><br>
+                    <a href="pra.html" style="text-decoration: none">カカポの寝室</a><br>
+                    <a href="graph.html" style="text-decoration: none">睡眠記録</a><br>
+                    <a href="setting.html" style="text-decoration: none">設定</a><br>
+                  </div>
+              </ul>
+            </nav>
+        </div>
+        <!--ハンバーガーメニュー終わり-->
+        
+        <div class="back_image_1"></div>
+        <div class="header">
+            <p align="center">カカポの寝室</p>
+        </div>
+        
+        <!--現在時刻-->
+        <!--
+        <div class="now_time">
+            <p id="now_date"></p>
+        </div>
+        -->
+        
+        
+        
+        
+        
+        <!--卵・カカポの画像-->
+        <div class="kakapo">
+            <p id="kakapo_pic_space"> </p>
+        </div>
+        
+        <!--成長度メーター-->
+        <div class="kakapo_meter">
+            <p id="meter_space"> </p>
+        </div>
+        
+        <!--メッセージボックス-->
+        <div class="mes_box">
+            <p id="mes_txt"></p>
+        </div>
+        
+        <!--仮記録ボタン-->
+        <!--
+        <div class='record_button'>
+            <a href='' id="sleep_button">就寝</a>
+        </div>-->
+        
+        <!--仮記録ボタン2-->
+        <!--
+        <div class='rec_btn'>
+            <a href='' id="rec_button">記録画面を表示</a>
+        </div>-->
+        
+        <!--記録ボタン-->
+        <div id="open">
+            <p class="open_text">記録画面を表示</p>
+        </div>
+        <div id="mask" class="hidden"></div>
+        <section id="modal" class="hidden">
+            <div class="modal_text">
+                <p>昨日の就寝時刻を入力してください</p>
+                <input type="time" id="sleep_rec" class="sleep_input">
+                <p>今日の起床時刻を入力してください</p>
+                <input type="time" id="getup_rec" class="getup_input">
+            </div>
+            <div id="submit_btn">
+                <p class="submit" style="color:black">登録</p>
+            </div>
+            <div id="close">
+                <p class="close_text">閉じる</p>
+            </div>
+            <div class="alert">
+                <p id="alert_mes"></p>
+            </div>
+        </section>
+        
+        
+        
+        <!--フッター-->
+        
+        
+        <!--目標起床・就寝時刻の表示-->
+        <div class="setting_time">
+            <p id="schedule_time"></p>
+        </div>
+        
+        
+
+        <!--卵の音の読み込み-->
+        <audio id="kakapo_play" preload="auto">
+            <source src="sounds_folder/tutuku.mp3" type="audio/mp3">
+        </audio>
+        
+        
+        
+        <!--クッキーを書き込むためのライブラリ-->
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+        
+        <!--jquery-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        
+        <!--メインの処理をするjsファイル-->
+        <script src="js_folder/index_fix.js"></script>
+        
+        
+        
+    </div>
+</body>
+</html>

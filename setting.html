@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>時刻設定</title>
+    <link rel="stylesheet" href="css_folder/setting.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <!--ハンバーガーメニュー-->
+        <div class="drawer">
+            <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+            <input type="checkbox" id="drawer-check" class="drawer-hidden" >
+
+            <!-- ハンバーガーアイコン -->
+            <label for="drawer-check" class="drawer-open"><span></span></label>
+
+            <!-- メニュー -->
+            <nav class="drawer-content">
+              <ul class="drawer-list">
+                  <div class="menu_link">
+                    <a href="https://www.ichinoseki.ac.jp/" style="text-decoration: none">仮リンク</a><br>
+                    <a href="" style="text-decoration: none">仮リンク2</a><br>
+                    <a href="" style="text-decoration: none">仮リンク3</a><br>
+                  </div>
+              </ul>
+            </nav>
+        </div>
+        <!--ハンバーガーメニュー終わり-->
+        
+        <div class="back_image"></div>
+        <div class="header">
+            <p align="center">設定画面</p>
+        </div>
+        
+        <div class="forms">
+        <form action="setting-time">
+            <div class="sleep_time">
+                <p>就寝時刻
+                    <input type="time" class="sleep_time" min="00:00" max="23:59" required></p>
+            </div>
+            <div class="wakeup_time">
+                <p>起床時刻
+                    <input type="time" class="wakeup_time" min="00:00" max="23:59" required></p>
+            </div>
+            <div class="send_times">
+                <input type="submit" class="send_times" value="時刻を設定">
+            </div>
+        </form>
+        <form action="setting-background">
+            <div class="background-picture">
+                <p>背景画像の設定</p>
+                <select class="background">
+                    <option value="1">背景1</option>
+                    <option value="2">背景2</option>
+                    <option value="3">背景3</option>
+                </select>
+            </div>
+        </form>
+        </div>
+    </div>
+</body>
+</html>
