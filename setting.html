@@ -38,11 +38,11 @@
         <form action="setting-time">
             <div class="sleep_time">
                 <p>就寝時刻
-                    <input type="time" class="sleep_time" min="00:00" max="23:59" required></p>
+                    <input type="time" class="sleep_time" min="00:00" max="23:59" required id="input_sleep_time"></p>
             </div>
             <div class="wakeup_time">
                 <p>起床時刻
-                    <input type="time" class="wakeup_time" min="00:00" max="23:59" required></p>
+                    <input type="time" class="wakeup_time" min="00:00" max="23:59" required id="input_wakeup_time"></p>
             </div>
             <div class="send_times">
                 <input type="submit" class="send_times" value="時刻を設定">
@@ -60,5 +60,6 @@
         </form>
         </div>
     </div>
+    <script src="js_folder/setting.js"></script>
 </body>
 </html>
