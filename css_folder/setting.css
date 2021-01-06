@@ -132,3 +132,8 @@ footer {
     font-size: 60px;
     text-align: center;
 }
+
+.message{
+  font-size: 45px;
+  color: tomato;
+}
