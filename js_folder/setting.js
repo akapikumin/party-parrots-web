@@ -2,7 +2,7 @@
 
 var config = JSON.parse(localStorage.getItem("config"));
 
-console.log(config)
+console.log(config);
 
 var is = document.getElementById("input_sleep_time");
 var iw = document.getElementById("input_wakeup_time");
@@ -18,4 +18,5 @@ function confSetItem(){
     localStorage.setItem("config", JSON.stringify(config));
 
     document.getElementById("changed_message").textContent = '時刻が新しく設定されました';
+    console.log(config);
 };
