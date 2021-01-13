@@ -1,5 +1,63 @@
-  //参考サイト
-  //https://syncer.jp/javascript-reference/canvas-getcontext
+//卵の音を出す関数
+function kakapo_play1(){
+  // 対象となるID名
+  var id = 'kakapo_sounds1';
+  // 初回以外だったら音声ファイルを巻き戻す
+  if( typeof( document.getElementById(id).currentTime ) != 'undefined' )
+  {
+    document.getElementById(id).currentTime = 0;
+  }
+  // [ID:sound-file]の音声ファイルを再生[play()]する
+  document.getElementById(id).play() ;
+}
+
+function kakapo_play2(){
+  // 対象となるID名
+  var id = 'kakapo_sounds2';
+  // 初回以外だったら音声ファイルを巻き戻す
+  if( typeof( document.getElementById(id).currentTime ) != 'undefined' )
+  {
+    document.getElementById(id).currentTime = 0;
+  }
+  // [ID:sound-file]の音声ファイルを再生[play()]する
+  document.getElementById(id).play() ;
+}
+
+function kakapo_play3(){
+  // 対象となるID名
+  var id = 'kakapo_sounds3';
+  // 初回以外だったら音声ファイルを巻き戻す
+  if( typeof( document.getElementById(id).currentTime ) != 'undefined' )
+  {
+    document.getElementById(id).currentTime = 0;
+  }
+  // [ID:sound-file]の音声ファイルを再生[play()]する
+  document.getElementById(id).play() ;
+}
+
+function kakapo_play4(){
+  // 対象となるID名
+  var id = 'kakapo_sounds4';
+  // 初回以外だったら音声ファイルを巻き戻す
+  if( typeof( document.getElementById(id).currentTime ) != 'undefined' )
+  {
+    document.getElementById(id).currentTime = 0;
+  }
+  // [ID:sound-file]の音声ファイルを再生[play()]する
+  document.getElementById(id).play() ;
+}
+
+function kakapo_play_special(){
+  // 対象となるID名
+  var id = 'kakapo_sounds_special';
+  // 初回以外だったら音声ファイルを巻き戻す
+  if( typeof( document.getElementById(id).currentTime ) != 'undefined' )
+  {
+    document.getElementById(id).currentTime = 0;
+  }
+  // [ID:sound-file]の音声ファイルを再生[play()]する
+  document.getElementById(id).play() ; 
+}
 
 
   //ユーザーステータスを取得
@@ -8,58 +66,53 @@
 
   //育てたカカポの数を取得（初期値 0）
   var kakapo_number = user_status.grew_kakapo - 1;
-  //var kakapo_number = 9;
   for(var i = 0; i <= kakapo_number; i++){
-      if(i == 0){
-        //カカポはまだ生まれていないため表示なし  
-      }
-      if(i == 1){
-        // カカポを表示
-        　document.getElementById("kakapo_pic_space").innerHTML = '<img src="image_folder/kakapo_1.gif" class="kakapo1">';
-      }
-      if(i == 2){
-          // カカポを表示
-        　document.getElementById("kakapo_pic_space").innerHTML = '<img src="image_folder/kakapo_1.gif" class="kakapo1"><img src="image_folder/kakapo_2.gif" class="kakapo2">';
-      }
-      if(i == 3){
-          // カカポを表示
-        　document.getElementById("kakapo_pic_space").innerHTML = '<img src="image_folder/kakapo_1.gif" class="kakapo1"><img src="image_folder/kakapo_2.gif" class="kakapo2"><img src="image_folder/kakapo_3.gif" class="kakapo3">';
-      }
-      if(i == 4){
-          // カカポを表示
-        　document.getElementById("kakapo_pic_space").innerHTML = '<img src="image_folder/kakapo_1.gif" class="kakapo1"><img src="image_folder/kakapo_2.gif" class="kakapo2"><img src="image_folder/kakapo_3.gif" class="kakapo3"><img src="image_folder/kakapo_4.gif" class="kakapo4">';
-      }
-      if(i == 5){
-          // カカポを表示
-        　document.getElementById("kakapo_pic_space").innerHTML = '<img src="image_folder/kakapo_1.gif" class="kakapo1"><img src="image_folder/kakapo_2.gif" class="kakapo2"><img src="image_folder/kakapo_3.gif" class="kakapo3"><img src="image_folder/kakapo_4.gif" class="kakapo4"><img src="image_folder/kakapo_5.gif" class="kakapo5">';
-      }
-      if(i == 6){
-        // カカポを表示
-      　document.getElementById("kakapo_pic_space").innerHTML = '<img src="image_folder/kakapo_1.gif" class="kakapo1"><img src="image_folder/kakapo_2.gif" class="kakapo2"><img src="image_folder/kakapo_3.gif" class="kakapo3"><img src="image_folder/kakapo_4.gif" class="kakapo4"><img src="image_folder/kakapo_5.gif" class="kakapo5"><img src="image_folder/kakapo_6.gif" class="kakapo6">';
+    if(i == 0){
+      //カカポはまだ生まれていないため表示なし  
     }
-    if(i == 7){
-        // カカポを表示
-      　document.getElementById("kakapo_pic_space").innerHTML = '<img src="image_folder/kakapo_1.gif" class="kakapo1"><img src="image_folder/kakapo_2.gif" class="kakapo2"><img src="image_folder/kakapo_3.gif" class="kakapo3"><img src="image_folder/kakapo_4.gif" class="kakapo4"><img src="image_folder/kakapo_5.gif" class="kakapo5"><img src="image_folder/kakapo_6.gif" class="kakapo6"><img src="image_folder/kakapo_7.gif" class="kakapo7">';
+    else if(i == 1){
+      // カカポを表示
+      document.getElementById("kakapo_pic_space").innerHTML = '<img src="image_folder/kakapo_1.gif" class="kakapo1" onClick = "kakapo_play1()">';
     }
-    if(i == 8){
-        // カカポを表示
-      　document.getElementById("kakapo_pic_space").innerHTML = '<img src="image_folder/kakapo_1.gif" class="kakapo1"><img src="image_folder/kakapo_2.gif" class="kakapo2"><img src="image_folder/kakapo_3.gif" class="kakapo3"><img src="image_folder/kakapo_4.gif" class="kakapo4"><img src="image_folder/kakapo_5.gif" class="kakapo5"><img src="image_folder/kakapo_6.gif" class="kakapo6"><img src="image_folder/kakapo_7.gif" class="kakapo7"><img src="image_folder/kakapo_8.gif" class="kakapo8">';
+    else if(i == 2){
+      // カカポを表示
+      document.getElementById("kakapo_pic_space").innerHTML = '<img src="image_folder/kakapo_1.gif" class="kakapo1" onClick = "kakapo_play1()"><img src="image_folder/kakapo_2.gif" class="kakapo2" onClick = "kakapo_play2()">';
     }
-    if(i == 9){
-        // カカポを表示
-      　document.getElementById("kakapo_pic_space").innerHTML = '<img src="image_folder/kakapo_1.gif" class="kakapo1"><img src="image_folder/kakapo_2.gif" class="kakapo2"><img src="image_folder/kakapo_3.gif" class="kakapo3"><img src="image_folder/kakapo_4.gif" class="kakapo4"><img src="image_folder/kakapo_5.gif" class="kakapo5"><img src="image_folder/kakapo_6.gif" class="kakapo6"><img src="image_folder/kakapo_7.gif" class="kakapo7"><img src="image_folder/kakapo_8.gif" class="kakapo8"<img src="image_folder/kakapo_9.gif" class="kakapo9">';
+    else if(i == 3){
+      // カカポを表示
+      document.getElementById("kakapo_pic_space").innerHTML = '<img src="image_folder/kakapo_1.gif" class="kakapo1" onClick = "kakapo_play1()"><img src="image_folder/kakapo_2.gif" class="kakapo2" onClick = "kakapo_play2()"><img src="image_folder/kakapo_3.gif" class="kakapo3" onClick = "kakapo_play3()">';
     }
-    if(i == 10){
-        // カカポを表示
-      　document.getElementById("kakapo_pic_space").innerHTML = '<img src="image_folder/kakapo_1.gif" class="kakapo1"><img src="image_folder/kakapo_2.gif" class="kakapo2"><img src="image_folder/kakapo_3.gif" class="kakapo3"><img src="image_folder/kakapo_4.gif" class="kakapo4"><img src="image_folder/kakapo_5.gif" class="kakapo5"><img src="image_folder/kakapo_6.gif" class="kakapo6"><img src="image_folder/kakapo_7.gif" class="kakapo7"><img src="image_folder/kakapo_8.gif" class="kakapo8"<img src="image_folder/kakapo_9.gif" class="kakapo9"><img src="image_folder/kakapo_10.gif" class="kakapo10">';
+    else if(i == 4){
+      // カカポを表示
+      document.getElementById("kakapo_pic_space").innerHTML = '<img src="image_folder/kakapo_1.gif" class="kakapo1" onClick = "kakapo_play1()"><img src="image_folder/kakapo_2.gif" class="kakapo2" onClick = "kakapo_play2()"><img src="image_folder/kakapo_3.gif" class="kakapo3" onClick = "kakapo_play3()"><img src="image_folder/kakapo_4.gif" class="kakapo4" onClick = "kakapo_play4()">';
     }
-    if(i == 11){
-        // カカポを表示
-      　document.getElementById("kakapo_pic_space").innerHTML = '<img src="image_folder/kakapo_1.gif" class="kakapo1"><img src="image_folder/kakapo_2.gif" class="kakapo2"><img src="image_folder/kakapo_3.gif" class="kakapo3"><img src="image_folder/kakapo_4.gif" class="kakapo4"><img src="image_folder/kakapo_5.gif" class="kakapo5"><img src="image_folder/kakapo_6.gif" class="kakapo6"><img src="image_folder/kakapo_7.gif" class="kakapo7"><img src="image_folder/kakapo_8.gif" class="kakapo8"<img src="image_folder/kakapo_9.gif" class="kakapo9"><img src="image_folder/kakapo_10.gif" class="kakapo10"><img src="image_folder/kakapo_11.gif" class="kakapo11">';
+    else if(i == 5){
+      // カカポを表示
+      document.getElementById("kakapo_pic_space").innerHTML = '<img src="image_folder/kakapo_1.gif" class="kakapo1" onClick = "kakapo_play1()"><img src="image_folder/kakapo_2.gif" class="kakapo2" onClick = "kakapo_play2()"><img src="image_folder/kakapo_3.gif" class="kakapo3" onClick = "kakapo_play3()"><img src="image_folder/kakapo_4.gif" class="kakapo4" onClick = "kakapo_play4()"><img src="image_folder/kakapo_5.gif" class="kakapo5" onClick = "kakapo_play1()">';
     }
-    if(i == 12){
-        // カカポを表示
-      　document.getElementById("kakapo_pic_space").innerHTML = '<img src="image_folder/kakapo_1.gif" class="kakapo1"><img src="image_folder/kakapo_2.gif" class="kakapo2"><img src="image_folder/kakapo_3.gif" class="kakapo3"><img src="image_folder/kakapo_4.gif" class="kakapo4"><img src="image_folder/kakapo_5.gif" class="kakapo5"><img src="image_folder/kakapo_6.gif" class="kakapo6"><img src="image_folder/kakapo_7.gif" class="kakapo7"><img src="image_folder/kakapo_8.gif" class="kakapo8"<img src="image_folder/kakapo_9.gif" class="kakapo9"><img src="image_folder/kakapo_10.gif" class="kakapo10"><img src="image_folder/kakapo_11.gif" class="kakapo11"><img src="image_folder/kakapo_12.gif" class="kakapo12">';
+    else if(i == 6){
+      // カカポを表示
+      document.getElementById("kakapo_pic_space").innerHTML = '<img src="image_folder/kakapo_1.gif" class="kakapo1" onClick = "kakapo_play1()"><img src="image_folder/kakapo_2.gif" class="kakapo2" onClick = "kakapo_play2()"><img src="image_folder/kakapo_3.gif" class="kakapo3" onClick = "kakapo_play3()"><img src="image_folder/kakapo_4.gif" class="kakapo4" onClick = "kakapo_play4()"><img src="image_folder/kakapo_5.gif" class="kakapo5" onClick = "kakapo_play1()"><img src="image_folder/kakapo_6.gif" class="kakapo6" onClick = "kakapo_play2()">';
+    }
+    else if(i == 7){
+      // カカポを表示
+      document.getElementById("kakapo_pic_space").innerHTML = '<img src="image_folder/kakapo_1.gif" class="kakapo1" onClick = "kakapo_play1()"><img src="image_folder/kakapo_2.gif" class="kakapo2" onClick = "kakapo_play2()"><img src="image_folder/kakapo_3.gif" class="kakapo3" onClick = "kakapo_play3()"><img src="image_folder/kakapo_4.gif" class="kakapo4" onClick = "kakapo_play4()"><img src="image_folder/kakapo_5.gif" class="kakapo5" onClick = "kakapo_play1()"><img src="image_folder/kakapo_6.gif" class="kakapo6" onClick = "kakapo_play2()"><img src="image_folder/kakapo_7.gif" class="kakapo7" onClick = "kakapo_play3()">';
+    }
+    else if(i == 8){
+      // カカポを表示
+      document.getElementById("kakapo_pic_space").innerHTML = '<img src="image_folder/kakapo_1.gif" class="kakapo1" onClick = "kakapo_play1()"><img src="image_folder/kakapo_2.gif" class="kakapo2" onClick = "kakapo_play2()"><img src="image_folder/kakapo_3.gif" class="kakapo3" onClick = "kakapo_play3()"><img src="image_folder/kakapo_4.gif" class="kakapo4" onClick = "kakapo_play4()"><img src="image_folder/kakapo_5.gif" class="kakapo5" onClick = "kakapo_play1()"><img src="image_folder/kakapo_6.gif" class="kakapo6" onClick = "kakapo_play2()"><img src="image_folder/kakapo_7.gif" class="kakapo7" onClick = "kakapo_play3()"><img src="image_folder/kakapo_8.gif" class="kakapo8" onClick = "kakapo_play4()">';
+    }
+    else if(i == 9){
+      // カカポを表示
+      document.getElementById("kakapo_pic_space").innerHTML = '<img src="image_folder/kakapo_1.gif" class="kakapo1" onClick = "kakapo_play1()"><img src="image_folder/kakapo_2.gif" class="kakapo2" onClick = "kakapo_play2()"><img src="image_folder/kakapo_3.gif" class="kakapo3" onClick = "kakapo_play3()"><img src="image_folder/kakapo_4.gif" class="kakapo4" onClick = "kakapo_play4()"><img src="image_folder/kakapo_5.gif" class="kakapo5" onClick = "kakapo_play1()"><img src="image_folder/kakapo_6.gif" class="kakapo6" onClick = "kakapo_play2()"><img src="image_folder/kakapo_7.gif" class="kakapo7" onClick = "kakapo_play3()"><img src="image_folder/kakapo_8.gif" class="kakapo8" onClick = "kakapo_play4()"><img src="image_folder/kakapo_9.gif" class="kakapo9" onClick = "kakapo_play1()">';
+    }
+    else if(i == 10){
+      // カカポを表示
+      document.getElementById("kakapo_pic_space").innerHTML = '<img src="image_folder/kakapo_1.gif" class="kakapo1" onClick = "kakapo_play1()"><img src="image_folder/kakapo_2.gif" class="kakapo2" onClick = "kakapo_play2()"><img src="image_folder/kakapo_3.gif" class="kakapo3" onClick = "kakapo_play3()"><img src="image_folder/kakapo_4.gif" class="kakapo4" onClick = "kakapo_play4()"><img src="image_folder/kakapo_5.gif" class="kakapo5" onClick = "kakapo_play1()"><img src="image_folder/kakapo_6.gif" class="kakapo6" onClick = "kakapo_play2()"><img src="image_folder/kakapo_7.gif" class="kakapo7" onClick = "kakapo_play3()"><img src="image_folder/kakapo_8.gif" class="kakapo8" onClick = "kakapo_play4()"><img src="image_folder/kakapo_9.gif" class="kakapo9" onClick = "kakapo_play1()"><img src="image_folder/kakapo_10.gif" class="kakapo10" onClick = "kakapo_play2()">';
+    }
+    else if(i == 11){
+      // カカポを表示
+      document.getElementById("kakapo_pic_space").innerHTML = '<img src="image_folder/kakapo_1.gif" class="kakapo1" onClick = "kakapo_play1()"><img src="image_folder/kakapo_2.gif" class="kakapo2" onClick = "kakapo_play2()"><img src="image_folder/kakapo_3.gif" class="kakapo3" onClick = "kakapo_play3()"><img src="image_folder/kakapo_4.gif" class="kakapo4" onClick = "kakapo_play4()"><img src="image_folder/kakapo_5.gif" class="kakapo5" onClick = "kakapo_play1()"><img src="image_folder/kakapo_6.gif" class="kakapo6" onClick = "kakapo_play2()"><img src="image_folder/kakapo_7.gif" class="kakapo7" onClick = "kakapo_play3()"><img src="image_folder/kakapo_8.gif" class="kakapo8" onClick = "kakapo_play4()"><img src="image_folder/kakapo_9.gif" class="kakapo9" onClick = "kakapo_play1()"><img src="image_folder/kakapo_10.gif" class="kakapo10" onClick = "kakapo_play2()"><img src="image_folder/kakapo_11.gif" class="kakapo11" onClick = "kakapo_play_special()">';
     }
   }
 

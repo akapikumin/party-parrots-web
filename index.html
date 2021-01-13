@@ -29,10 +29,17 @@
         </div>
         <!--ハンバーガーメニュー終わり-->
         
+        <!--目標起床・就寝時刻の表示-->
+        <div class="setting_time">
+            <p id="schedule_time"></p>
+        </div>
+        
+        
         <div class="back_image_1"></div>
         <div class="header">
             <p align="center">カカポの寝室</p>
         </div>
+        
         
         <!--現在時刻-->
         <!--
@@ -98,19 +105,15 @@
         
         
         <!--フッター-->
-        
-        
-        <!--目標起床・就寝時刻の表示-->
-        <div class="setting_time">
-            <p id="schedule_time"></p>
+        <div class="fo">
+            <p style="font-size: 25pt; text-align: center;">created by 5group</p>
         </div>
         
         
+        
+        
 
-        <!--卵の音の読み込み-->
-        <audio id="kakapo_play" preload="auto">
-            <source src="sounds_folder/tutuku.mp3" type="audio/mp3">
-        </audio>
+        
         
         
         
@@ -122,6 +125,11 @@
         
         <!--メインの処理をするjsファイル-->
         <script src="js_folder/index_fix.js"></script>
+        
+        <!--卵の音の読み込み-->
+        <audio id="kakapo_play" preload="auto">
+            <source src="sounds_folder/tutuku.mp3" type="audio/mp3">
+        </audio>
         
         
         

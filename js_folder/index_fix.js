@@ -7,6 +7,7 @@ function message(text){
     document.getElementById('mes_txt').textContent = text;
 }
 
+
 //卵の音を出す関数
 function kakapo_sound(){
     // 対象となるID名
@@ -198,7 +199,7 @@ if (!localStorage.getItem('first_access')) {
         //成長度メーターの表示
         document.getElementById('meter_space').innerHTML = '<img src="image_folder/kakapo_meter/' + String(kakapo_status.growth_rate) + '.gif" class="kakapo_meter">';
         //卵の表示(ここに卵(ヒビ入り)の画像を追加。今まで育てたカカポの種類数を取得し、if文で分岐させる予定)
-        document.getElementById('kakapo_pic_space').innerHTML = '<img src="image_folder/egg/egg1_clack.png" class="kakapo">';
+        document.getElementById('kakapo_pic_space').innerHTML = '<img src="image_folder/egg/egg1_clack.png" class="kakapo" onClick="kakapo_sound()">';
         //メッセージ
         message('ヒビが入ってきた…。 もうすぐ生まれそうだ!');
     }
@@ -416,22 +417,29 @@ document.getElementById("rec_button").onclick = function(){
         if((wake_hour_config == getup_hour) && (wake_min_dif > 0)){
             //起床時間が守れなかった場合
             console.log("時は守れた(起床時間)");
+            message("ねむーい、今日こそちゃんと寝ようね…");
         }
         else if (wake_hour_config < getup_hour){
             //起床時間が守れなかった場合
             console.log("時も守れなかった(起床時間)");
+            message("ねむーい、今日こそちゃんと寝ようね…");
         }
         else if (sleep_hour > sleep_hour_config){
             //就寝時間が守れなかった場合
-            console.log("時も守れなかった(就寝時間)")
+            console.log("時も守れなかった(就寝時間)");
+            message("ねむーい、今日こそちゃんと寝ようね…");
         }
         else if ((sleep_hour == sleep_hour_config) && (sleep_min_dif > 0)){
             //就寝時刻が守れなかった場合
             console.log("時は守れた(就寝時間)");
+            message("ねむーい、今日こそちゃんと寝ようね…");
         }
         else{
            //時間を守れていたらカカポの成長度を1プラス
             kakapo_status["growth_rate"]++;
+            
+            //守れた場合のメッセージを表示
+            message("えらい！ちゃんと眠れたんだね！");
         }
         
         //データを書き込み
@@ -451,10 +459,10 @@ document.getElementById("rec_button").onclick = function(){
         localStorage.setItem("last_save", JSON.stringify(save_time));
 
         //5秒後に再読み込み(仮)
-        //setTimeout("location.reload(true)", 5000);
+        setTimeout("location.reload(true)", 5000);
 
         //ページを再読み込み
-        location.reload(true);
+        //location.reload(true);
         
         modal.classList.add('hidden');
         mask.classList.add('hidden');

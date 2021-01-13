@@ -2,9 +2,8 @@
 <html lang="ja">
 <head>
     <meta charset="utf-8">
-    <title>カカポのお部屋</title>
+    <title>カカポの部屋</title>
     <link rel="stylesheet" href="css_folder/pra.css">        
-    <link rel="stylesheet" href="css_folder/index.css">
 </head>
     
 <body>
@@ -19,9 +18,10 @@
             <nav class="drawer-content">
               <ul class="drawer-list">
                   <div class="menu_link">
-                    <a href="https://www.ichinoseki.ac.jp/" style="text-decoration: none">ホーム画面</a><br>
-                    <a href="file:///Users/yonekawahiroto/%E7%A4%BE%E4%BC%9A%E5%AE%9F%E8%A3%85%E5%AE%9F%E7%BF%92/party-parrots-web/index.html" style="text-decoration: none">記録画面</a><br>
-                    <a href="file:///Users/yonekawahiroto/%E7%A4%BE%E4%BC%9A%E5%AE%9F%E8%A3%85%E5%AE%9F%E7%BF%92/party-parrots-web/pra.html" style="text-decoration: none">カカポ一覧</a><br>
+                    <a href="index.html" style="text-decoration: none">ホーム画面</a><br>
+                    <a href="pra.html" style="text-decoration: none">カカポの寝室</a><br>
+                    <a href="graph.html" style="text-decoration: none">睡眠記録</a><br>
+                    <a href="setting.html" style="text-decoration: none">設定</a><br>
                   </div>
               </ul>
             </nav>
@@ -33,7 +33,7 @@
         
         <!-- ヘッダー -->
         <div class="header">
-            <p>カカポ部屋</p>
+            <p>カカポの寝室</p>
         </div>
 
         <!--カカポの画像-->
@@ -47,7 +47,23 @@
             <p id="schedule_time"></p>
         </footer>
         
-        <script src="../party-parrots-web/js_folder/jquery-3.5.1.min.js"></script>
+        <!--卵の音の読み込み-->
+        <audio id="kakapo_sounds1" preload="auto">
+            <source src="sounds_folder/shichun.mp3" type="audio/mp3">
+        </audio>
+        <audio id="kakapo_sounds2" preload="auto">
+            <source src="sounds_folder/chun.mp3" type="audio/mp3">
+        </audio>
+        <audio id="kakapo_sounds3" preload="auto">
+            <source src="sounds_folder/piihyoro.mp3" type="audio/mp3">
+        </audio>
+        <audio id="kakapo_sounds4" preload="auto">
+            <source src="sounds_folder/piyopiyo.mp3" type="audio/mp3">
+        </audio>
+        <audio id="kakapo_sounds_special" preload="auto">
+            <source src="sounds_folder/bom8.mp3" type="audio/mp3">
+        </audio>
+        
         <script src="js_folder/pra.js"></script>
             
     </div>

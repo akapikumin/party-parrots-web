@@ -59,13 +59,13 @@ window.onload = function() {
     }
 
     //成功判定と, それに伴う色の変更
-    var colors = ['rgba(30, 30, 180, 0.8)'];
+    var colors = [''];
     for (i = 0; i < N; i++) {
         if (sleep_data[i] <= target_sleep && getup_data[i] <= target_getup) {
-            colors[i] = 'rgba(220, 140, 30, 0.8)'
+            colors[i] = 'rgba(255, 160, 0, 0.8)'
         }
         else {
-            colors[i] = 'rgba(30, 30, 180, 0.8)'
+            colors[i] = 'rgba(0, 0, 140, 0.8)'
         }
     }
 

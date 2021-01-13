@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>カカポの寝室テスト[記録]</title>
     <link rel="stylesheet" href="css_folder\graph.css">
-    <link rel="stylesheet" href="css_folder\index.css">
 </head>
 <body>
     <div id="wrapper">
@@ -26,9 +25,14 @@
               </ul>
             </nav>
         </div>
-        
+
+        <!--目標起床・就寝時刻の表示-->
+        <div class="setting_time">
+            <p id="schedule_time"></p>
+        </div>
+
         <!--背景-->
-        <div class="back_image"></div>
+        <div class="back_image_1"></div>
 
         <!--ヘッダー-->
         <div class="header">
@@ -69,11 +73,10 @@
             </div>
         </section>
         -->
-        
+
         <!--フッター-->
         <footer>
-            <!--目標起床・就寝時刻の表示-->
-            <p id="schedule_time"></p>
+            <p style="font-size: 10; text-align: right;">@created by 5 group</p>
         </footer>
 
         <!--メインの処理をするjsファイル-->

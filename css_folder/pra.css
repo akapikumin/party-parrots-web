@@ -4,8 +4,119 @@ html {
     -webkit-font-smoothing: antialiased;
 }
 
+.header{
+    font-size: 50pt;
+    font-weight: bold;
+    background-color: darkseagreen;
+}
 .header p {
     text-align: center;
+}
+
+/*背景画像の設定*/
+.back_image{
+    z-index:-1;
+    overflow: hidden;
+    /*background-color: rgb(0,163,175);/*半透明カラーの色*/
+}
+.back_image_1::before{
+    content: '';
+    background: url('../image_folder/room.jpg');/*背景画像のURL*/
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 1;/*半透明カラーの透明度*/
+    filter: blur(3px);/*ぼかし度*/
+    position: absolute;
+    /* 参考: http://designcolor-web.com/2016/09/14/css-blur-effects-background/*/
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    z-index: -1;
+}
+
+/*ハンバーガーメニュー*/
+/* チェックボックスは非表示に */
+.drawer-hidden {
+    display: none;
+}
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer-open {
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 100;/* 重なり順を一番上に */
+  cursor: pointer;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer-open span,
+.drawer-open span:before,
+.drawer-open span:after {
+  content: '';
+  display: block;
+  height: 8px;
+  width: 60px;
+  border-radius: 3px;
+  background: #333;
+  transition: 0.5s;
+  position: absolute;
+}
+
+/* 三本線のうち一番上の棒の位置調整 */
+.drawer-open span:before {
+  bottom: 18px;
+}
+
+/* 三本線のうち一番下の棒の位置調整 */
+.drawer-open span:after {
+  top: 18px;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer-check:checked ~ .drawer-open span {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer-check:checked ~ .drawer-open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#drawer-check:checked ~ .drawer-open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+  
+/* メニューのデザイン*/
+.drawer-content {
+  width: 100%;
+  height: 100%;
+  font-size: 40pt;
+  position: fixed;
+  top: 0;
+  left: 100%;/* メニューを画面の外に飛ばす */
+  z-index: 99;
+  background: #fff;
+  transition: .5s;
+}
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer-check:checked ~ .drawer-content {
+  left: 10%;/* メニューを画面に入れる */
+}
+
+/*ハンバーガーメニューのリンク*/
+.menu_link {
+    line-height: 250%;
+    font-weight: bold;
+    letter-spacing: 10px;
 }
 
 .kakapo1 {
@@ -15,7 +126,6 @@ html {
     top: 200px;
     left: 0px;
 }
-
 .kakapo2 {
     z-index: 10;
     width: 30%;
@@ -23,7 +133,6 @@ html {
     top: 800px;
     left: 660px;
 }
-
 .kakapo3 {
     z-index: 10;
     width: 30%;
@@ -31,15 +140,13 @@ html {
     bottom: 100px;
     left: 340px;
 }
-
 .kakapo4 {
     z-index: 10;
     width: 30%;
     position: absolute;
-    top: 1000px;
+    top: 920px;
     left: 50px;
 }
-
 .kakapo5 {
     z-index: 10;
     width: 30%;
@@ -47,15 +154,13 @@ html {
     top: 700px;
     left: 400px;
 }
-
 .kakapo6 {
     z-index: 10;
     width: 30%;
     position: absolute;
     top: 280px;
-    left: 690px;
+    left: 680px;
 }
-
 .kakapo7 {
     z-index: 10;
     width: 30%;
@@ -63,40 +168,49 @@ html {
     bottom: 200px;
     left: 680px;
 }
-
 .kakapo8 {
     z-index: 10;
-    width: 30%;
+    width: 35%;
     position: absolute;
     top: 500px;
-    left: 80px;
+    left: 180px;
 }
-
 .kakapo9 {
     z-index: 10;
     width: 30%;
     position: absolute;
-    top: 500px;
-    left: 280px;
+    top: 1100px;
+    left: 350px;
 }
-
 .kakapo10 {
     z-index: 10;
     width: 30%;
-    margin-top: 60%;
-    margin-left: 30%;
+    position: absolute;
+    bottom: 10px;
+    left: 40px;
 }
-
 .kakapo11 {
-    z-index: 10;
-    width: 30%;
-    margin-top: 60%;
-    margin-left: 30%;
+    z-index: 20;
+    width: 100%;
+    position: absolute;
+    top: 600px;
+    left: 0px;
 }
 
-.kakapo12 {
-    z-index: 10;
-    width: 30%;
-    margin-top: 60%;
-    margin-left: 30%;
+/*目標時刻・就寝時刻*/
+.setting_time{
+    font-size: 25pt;
+}
+
+
+/*フッターを下に固定*/
+body,
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+footer {
+    margin-top: auto;
+    font-size: 25pt;
 }
