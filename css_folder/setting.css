@@ -26,7 +26,10 @@
 .header{
     font-size: 50pt;
     font-weight: bold;
-    background-color: darkseagreen;
+    background-image: url('../image_folder/header.png');
+    background-color: azure;
+    z-index: 10;
+    color: #006600;
 }
 
 /*ハンバーガーメニュー*/
@@ -135,5 +138,14 @@ footer {
 
 .message{
   font-size: 45px;
-  color: tomato;
+  color: black;
+  background-color: white;
+}
+
+/*目標時刻・就寝時刻*/
+.setting_time{
+    position: absolute;
+    font-size: 25pt;
+    margin-top: -2.5%;
+    margin-left: 38%;
 }

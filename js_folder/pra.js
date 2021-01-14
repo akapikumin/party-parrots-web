@@ -1,3 +1,9 @@
+//メッセージを出す関数
+function message(text){
+    document.getElementById('mes_txt').textContent = text;
+}
+
+
 //卵の音を出す関数
 function kakapo_play1(){
   // 対象となるID名
@@ -9,6 +15,8 @@ function kakapo_play1(){
   }
   // [ID:sound-file]の音声ファイルを再生[play()]する
   document.getElementById(id).play() ;
+    
+  message("このカカポは「シーチュン！」と鳴くようだねぇ。");
 }
 
 function kakapo_play2(){
@@ -21,6 +29,8 @@ function kakapo_play2(){
   }
   // [ID:sound-file]の音声ファイルを再生[play()]する
   document.getElementById(id).play() ;
+    
+    message("このカカポは「チュン！」と鳴くようだねぇ。");
 }
 
 function kakapo_play3(){
@@ -33,6 +43,8 @@ function kakapo_play3(){
   }
   // [ID:sound-file]の音声ファイルを再生[play()]する
   document.getElementById(id).play() ;
+      
+    message("このカカポは「ピィヒョロ！」と鳴くようだねぇ。");
 }
 
 function kakapo_play4(){
@@ -45,6 +57,8 @@ function kakapo_play4(){
   }
   // [ID:sound-file]の音声ファイルを再生[play()]する
   document.getElementById(id).play() ;
+      
+    message("このカカポは「ピチチチチィー！」と鳴くようだねぇ。");
 }
 
 function kakapo_play_special(){
@@ -57,7 +71,11 @@ function kakapo_play_special(){
   }
   // [ID:sound-file]の音声ファイルを再生[play()]する
   document.getElementById(id).play() ; 
+      
+    message("このカカポはなぜ爆発するんだ？？");
 }
+
+
 
 
   //ユーザーステータスを取得
@@ -66,13 +84,25 @@ function kakapo_play_special(){
 
   //育てたカカポの数を取得（初期値 0）
   var kakapo_number = user_status.grew_kakapo - 1;
+  
+  if (kakapo_number == 0){
+      message("まだ誰もいないようだ…");
+  }
+  else{
+      //document.getElementById('mes_txt').style.display = "none";
+      var text_make = "現在のカカポ " + String(kakapo_number) + "羽";
+      message(text_make);
+  }
+
   for(var i = 0; i <= kakapo_number; i++){
     if(i == 0){
-      //カカポはまだ生まれていないため表示なし  
+      //カカポはまだ生まれていないため表示なし
+      
     }
     else if(i == 1){
       // カカポを表示
       document.getElementById("kakapo_pic_space").innerHTML = '<img src="image_folder/kakapo_1.gif" class="kakapo1" onClick = "kakapo_play1()">';
+      
     }
     else if(i == 2){
       // カカポを表示

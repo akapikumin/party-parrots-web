@@ -58,6 +58,10 @@ window.onload = function() {
         sleep_data2[i] = getup_data[i] - sleep_data[i];
     }
 
+    for (i = 0; i < N; i++) {
+        c[i] = 44;
+    }
+
     //成功判定と, それに伴う色の変更
     var colors = [''];
     for (i = 0; i < N; i++) {
@@ -67,6 +71,11 @@ window.onload = function() {
         else {
             colors[i] = 'rgba(0, 0, 140, 0.8)'
         }
+    }
+
+    var n = 7;
+    if (N > 7) {
+        n = N;
     }
 
     //ラベルのフォントカラーとフォントサイズ
@@ -97,7 +106,8 @@ window.onload = function() {
             responsive: false,
             scales: {
                 xAxes: [{
-                    stacked: true
+                    stacked: true,
+                    barPercentage: 7 / (1.1 * n),
                 }],
                 yAxes: [{
                     stacked: true,

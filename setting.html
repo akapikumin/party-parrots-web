@@ -30,6 +30,11 @@
         </div>
         <!--ハンバーガーメニュー終わり-->
         
+        <!--目標起床・就寝時刻の表示-->
+        <div class="setting_time">
+            <p id="schedule_time"></p>
+        </div>
+        
         <div class="back_image"></div>
         <div class="header">
             <p align="center">設定画面</p>
@@ -48,9 +53,7 @@
             <div class="send_times">
                 <input type="button" class="send_times" value="時刻を設定" onclick = "confSetItem(); return false;">
             </div>
-            <div class="message">
-                <p id="changed_message"></p>
-            </div>
+            
         </form>
         <form action="setting-background">
             <div class="background-picture">
@@ -62,6 +65,19 @@
                 </select>
             </div>
         </form>
+        <!--データクリアボタン-->
+        <div class="data_clear">
+            <input type="button" class="send_times" value="睡眠データの消去" onclick = "LS_clear(); return false;">
+        </div>
+        <div class="message">
+                <p id="changed_message"></p>
+        </div>
+        
+        </div>
+        <!--フッター-->
+        <div class="fo">
+            <hr color="gray" size="2px">
+            <p style="font-size: 25pt; text-align: right; color: white">©created by 5 group</p>
         </div>
     </div>
     <script src="js_folder/setting.js"></script>
