@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="utf-8">
-    <title>カカポの寝室テスト[記録]</title>
+    <title>カカポの寝室 睡眠記録</title>
     <link rel="stylesheet" href="css_folder\graph.css">
 </head>
 <body>
@@ -38,10 +38,15 @@
 
         <!--ヘッダー-->
         <div class="header">
-            <p>睡眠記録</p>
+            <p><a href="index.html" class="home_link" style="text-decoration: none;">カカポの寝室</a></p>
         </div>
 
         <div class="space"></div>
+        
+        <!--グラフタイトル-->
+        <div class="graph_title">
+            <p style="text-align: center; font-size: 38pt;">現在の睡眠記録</p>
+        </div>
 
         <!--グラフを描写-->
         <canvas id="graph" height="750"></canvas>
@@ -49,7 +54,7 @@
         <!--フッター-->
         <footer>
             <hr color="gray" size="2px">
-            <p style="font-size: 25pt; text-align: right;">©created by 5 group</p>
+            <p style="font-size: 25pt; text-align: right; color: white">©created by 5 group</p>
         </footer>
 
         <!--メインの処理をするjsファイル-->

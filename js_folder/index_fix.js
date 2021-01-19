@@ -334,6 +334,56 @@ document.getElementById("rec_button").onclick = function(){
 }
 */
 
+//記録画面の就寝・起床時刻フォームを挿入
+//設定した就寝・起床時刻を読み込み
+var set_time = JSON.parse(localStorage.getItem("config"));
+//挿入
+if(set_time.sleep_min <= 9){
+    //就寝時刻
+    document.getElementById('sleep_form').innerHTML 
+    = '<input type="time" id="sleep_rec" class="sleep_input" step="300" ' + 'value="' + set_time.sleep_hour + 
+    ':0' + set_time.sleep_min + '">';
+}
+else{
+    //就寝時刻
+    document.getElementById('sleep_form').innerHTML 
+    = '<input type="time" id="sleep_rec" class="sleep_input" step="300" ' + 'value="' + set_time.sleep_hour + 
+    ':' + set_time.sleep_min + '">';
+    //起床時刻
+    document.getElementById('getup_form').innerHTML 
+    = '<input type="time" id="getup_rec" class="getup_input" step="300" ' + 'value="' + set_time.wakeup_hour + 
+    ':' + set_time.wakeup_min + '">';
+}
+if(set_time.wakeup_hour <= 9){
+    if(set_time.wakeup_min <= 9){
+        //起床時刻
+        document.getElementById('getup_form').innerHTML 
+        = '<input type="time" id="getup_rec" class="getup_input" step="300" ' + 'value="0' + set_time.wakeup_hour + 
+        ':0' + set_time.wakeup_min + '">';
+    }
+    else{
+        //起床時刻
+        document.getElementById('getup_form').innerHTML 
+        = '<input type="time" id="getup_rec" class="getup_input" step="300" ' + 'value="0' + set_time.wakeup_hour + 
+        ':' + set_time.wakeup_min + '">';
+    }
+}
+else{
+    if(set_time.wakeup_min <= 9){
+        //起床時刻
+        document.getElementById('getup_form').innerHTML 
+        = '<input type="time" id="getup_rec" class="getup_input" step="300" ' + 'value="' + set_time.wakeup_hour + 
+        ':0' + set_time.wakeup_min + '">';
+    }
+    else{
+        //起床時刻
+        document.getElementById('getup_form').innerHTML 
+        = '<input type="time" id="getup_rec" class="getup_input" step="300" ' + 'value="' + set_time.wakeup_hour + 
+        ':' + set_time.wakeup_min + '">';
+    }
+}
+
+
 
 //ポップアップの処理
 'use strict';

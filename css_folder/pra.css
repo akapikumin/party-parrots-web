@@ -16,6 +16,16 @@ html {
     text-align: center;
 }
 
+/*リンク*/
+a{
+    color: #404040;
+}
+
+/*ホームのリンク*/
+.home_link{
+    color: #006600;
+}
+
 /*背景画像の設定*/
 .back_image{
     z-index:-1;
@@ -105,7 +115,7 @@ html {
   top: 0;
   left: 100%;/* メニューを画面の外に飛ばす */
   z-index: 99;
-  background: #fff;
+  background: #f0f8ff;
   transition: .5s;
 }
 

@@ -36,6 +36,16 @@
     text-align: center;
 }
 
+/*ホームのリンク*/
+.home_link{
+    color: #006600;
+}
+
+/*リンク*/
+a{
+    color: #404040;
+}
+
 .space {
     height: 5vh;
 }
@@ -131,7 +141,7 @@ footer {
     top: 0;
     left: 100%; /*メニューを画面の外に飛ばす*/
     z-index: 99;
-    background: #fff;
+    background: #f0f8ff;
     transition: .5s;
 }
 /*アイコンがクリックされたらメニューを表示*/

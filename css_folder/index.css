@@ -24,6 +24,11 @@
     z-index: -1;
 }
 
+/*リンク*/
+a{
+    color: #404040;
+}
+
 .header{
     font-size: 50pt;
     font-weight: bold;
@@ -40,6 +45,11 @@
 .now_time{
     
     font-size: 30pt;
+}
+
+/*ホームのリンク*/
+.home_link{
+    color: #006600;
 }
 
 /*記録ボタン(仮)*/
@@ -341,7 +351,8 @@ footer {
   top: 0;
   left: 100%;/* メニューを画面の外に飛ばす */
   z-index: 99;
-  background: #fff;
+  /*ハンバーガーメニューの背景色*/
+  background: #f0f8ff;
   transition: .5s;
 }
 
