@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
     <meta charset="utf-8">
-    <title>カカポの寝室 -ホーム</title>
+    <title>カカポの寝室 ホーム</title>
     <link rel="stylesheet" href="css_folder/index.css">
 </head>
 <body>
@@ -37,7 +37,7 @@
         
         <div class="back_image_1"></div>
         <div class="header">
-            <p align="center">カカポの寝室</p>
+            <p align="center"><a href="index.html" class="home_link" style="text-decoration: none;">カカポの寝室</a></p>
         </div>
         
         
@@ -87,9 +87,15 @@
         <section id="modal" class="hidden">
             <div class="modal_text">
                 <p>昨日の就寝時刻を入力してください</p>
-                <input type="time" id="sleep_rec" class="sleep_input">
+                <div>
+                    <!--就寝時刻フォーム-->
+                    <p id="sleep_form"></p>
+                </div>
                 <p>今日の起床時刻を入力してください</p>
-                <input type="time" id="getup_rec" class="getup_input">
+                <div>
+                    <!--起床時刻フォーム-->
+                    <p id="getup_form"></p>
+                </div>
             </div>
             <div id="submit_btn">
                 <p class="submit" style="color:black">登録</p>
@@ -107,7 +113,7 @@
         <!--フッター-->
         <div class="fo">
             <hr color="gray" size="2px">
-            <p style="font-size: 30pt; text-align: right;">©created by 5 group</p>
+            <p style="font-size: 30pt; text-align: right; color: white">©created by 5 group</p>
         </div>
         
         
