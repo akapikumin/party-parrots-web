@@ -1,4 +1,7 @@
 @charset "utf-8";
+body{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
 
 html {
     -webkit-font-smoothing: antialiased;
@@ -33,6 +36,7 @@ a{
 }
 .back_image_1::before{
     content: '';
+    height: 130%;
     background: url('../image_folder/room.jpg');/*背景画像のURL*/
     background-size: cover;
     background-position: center;
@@ -129,6 +133,18 @@ a{
     line-height: 250%;
     font-weight: bold;
     letter-spacing: 10px;
+    font-size: 50pt;
+}
+
+/*ハンバーガーメニューのカカポ*/
+.menu_kakapo{
+    transform: rotate(270deg);
+    transition:all 1.5s;  
+}
+.menu_kakapo:hover{
+    width: 120%;
+    margin-left: 200%;
+    margin-top: -10%;
 }
 
 .kakapo1 {

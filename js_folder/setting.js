@@ -23,7 +23,7 @@ function confSetItem(){
 
     localStorage.setItem("config", JSON.stringify(config));
 
-    document.getElementById("changed_message").textContent = '時刻が新しく設定されました';
+    document.getElementById("changed_message").textContent = '時刻が新しく設定されました。データを更新します…';
     console.log(config);
     
     //ページの再読み込み

@@ -2,8 +2,8 @@
 <html lang="ja">
 <head>
     <meta charset="utf-8">
-    <title>カカポの寝室</title>
-    <link rel="stylesheet" href="css_folder/index.css">
+    <title>カカポの寝室 ヘルプ</title>
+    <link rel="stylesheet" href="css_folder/help.css">
     <link rel="shortcut icon" href="image_folder/favicon.ico"/>
     <link rel="apple-touch-icon" sizes="180x180" href="image_folder/kakapo_1.png">
     
@@ -55,73 +55,36 @@
             <p align="center"><a href="index.html" class="home_link" style="text-decoration: none;">カカポの寝室</a></p>
         </div>
         
-        
-        <!--現在時刻-->
-        <!--
-        <div class="now_time">
-            <p id="now_date"></p>
+        <!--コンテンツ-->
+        <div class="contents">
+            <p style="text-align: center; font-size: 40pt; background-color: white; border-radius: 10pt;">カカポの寝室 使い方</p>
+            <p style="text-align: center; font-size: 40pt; background-color: white; border-radius: 10pt;">～ホーム画面～</p>
+            <img src="image_folder/help/home_1.jpg" 
+                 style="text-align: center;
+                        width: 100%;">
+            <p style="text-align: center; font-size: 40pt; background-color: white; border-radius: 10pt;">～ホーム画面(記録)～</p>
+            <img src="image_folder/help/home_2.jpg" 
+                 style="text-align: center;
+                        width: 100%;">
+            <p style="text-align: center; font-size: 40pt; background-color: white; border-radius: 10pt;">～カカポの部屋～</p>
+            <img src="image_folder/help/room.jpg" 
+                 style="text-align: center;
+                        width: 100%;">
+            <p style="text-align: center; font-size: 40pt; background-color: white; border-radius: 10pt;">～睡眠グラフ画面～</p>
+            <img src="image_folder/help/graph.jpg" 
+                 style="text-align: center;
+                        width: 100%;">
+            <p style="text-align: center; font-size: 40pt; background-color: white; border-radius: 10pt;">～設定画面～</p>
+            <img src="image_folder/help/setting.jpg" 
+                 style="text-align: center;
+                        width: 100%;">
+            <p style="text-align: center; font-size: 40pt; background-color: white; border-radius: 10pt;">よくある質問</p>
+            <p style="color: white; font-size: 20pt;">Q. カカポの卵がうまく表示されない…</p>
+            <p style="color: white; font-size: 20pt;">A. 一度ブラウザを再起動してみてください。</p>
+            <p style="color: white; font-size: 20pt;">Q. カカポは何日で出てくるの？</p>
+            <p style="color: white; font-size: 20pt;">A. 7日間睡眠習慣を守れば出てきます。</p>
         </div>
-        -->
         
-        
-        
-        
-        
-        <!--卵・カカポの画像-->
-        <div class="kakapo">
-            <p id="kakapo_pic_space"> </p>
-        </div>
-        
-        <!--成長度メーター-->
-        <div class="kakapo_meter">
-            <p id="meter_space"> </p>
-        </div>
-        
-        <!--メッセージボックス-->
-        <div class="mes_box">
-            <p id="mes_txt"></p>
-        </div>
-        
-        <!--仮記録ボタン-->
-        <!--
-        <div class='record_button'>
-            <a href='' id="sleep_button">就寝</a>
-        </div>-->
-        
-        <!--仮記録ボタン2-->
-        <!--
-        <div class='rec_btn'>
-            <a href='' id="rec_button">記録画面を表示</a>
-        </div>-->
-        
-        <!--記録ボタン-->
-        <div id="open">
-            <p class="open_text">記録画面を表示</p>
-        </div>
-        <div id="mask" class="hidden"></div>
-        <section id="modal" class="hidden">
-            <div class="modal_text">
-                <p>昨日の就寝時刻を入力してください</p>
-                <div>
-                    <!--就寝時刻フォーム-->
-                    <p id="sleep_form"></p>
-                </div>
-                <p>今日の起床時刻を入力してください</p>
-                <div>
-                    <!--起床時刻フォーム-->
-                    <p id="getup_form"></p>
-                </div>
-            </div>
-            <div id="submit_btn">
-                <p class="submit" style="color:black">登録</p>
-            </div>
-            <div id="close">
-                <p class="close_text">閉じる</p>
-            </div>
-            <div class="alert">
-                <p id="alert_mes"></p>
-            </div>
-        </section>
         
         
         
@@ -133,12 +96,6 @@
         
         
         
-        
-
-        
-        
-        
-        
         <!--クッキーを書き込むためのライブラリ-->
         <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
         
@@ -146,12 +103,7 @@
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         
         <!--メインの処理をするjsファイル-->
-        <script src="js_folder/index_fix.js"></script>
-        
-        <!--卵の音の読み込み-->
-        <audio id="kakapo_play" preload="auto">
-            <source src="sounds_folder/tutuku.mp3" type="audio/mp3">
-        </audio>
+        <script src="js_folder/help.js"></script>
         
         
         
